@@ -19,14 +19,14 @@ TARGET_SCREEN_WIDTH := 1080
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+#    $(LOCAL_PATH)/overlay-lineage
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
 
 # Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+#PRODUCT_AAPT_CONFIG := normal
+#PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -37,28 +37,34 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 
 # Camera
+#PRODUCT_PACKAGES += \
+#    Snap
+
+# Camera motor
 PRODUCT_PACKAGES += \
-    Snap
+    libdng_sdk.vendor \
+    libgui_vendor \
+    vendor.lineage.camera.motor@1.0-service.xiaomi_raphael
 
 # Device-specific settings
-PRODUCT_PACKAGES += \
-    XiaomiParts
+#PRODUCT_PACKAGES += \
+#    XiaomiParts
 
 # Display
 PRODUCT_PACKAGES += \
     libvulkan
 
 # Fingerprint
-PRODUCT_COPY_FILES += \
-    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+#PRODUCT_COPY_FILES += \
+#    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 PRODUCT_PACKAGES += \
     lineage.biometrics.fingerprint.inscreen@1.0-service.raphael
 
 # FM
 PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
+#    FM2 \
+#    libqcomfm_jni \
     qcom.fmradio
 
 # HIDL
@@ -67,15 +73,15 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0
 
 # HotwordEnrollement
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
 
 # IFAA manager
-PRODUCT_PACKAGES += \
-    org.ifaa.android.manager
+#PRODUCT_PACKAGES += \
+#    org.ifaa.android.manager
 
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
+#PRODUCT_BOOT_JARS += \
+#    org.ifaa.android.manager
 
 # Init
 PRODUCT_PACKAGES += \
@@ -88,8 +94,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/sm8150-tavil-snd-card_Button_Jack.kl:system/usr/keylayout/sm8150-tavil-snd-card_Button_Jack.kl
 
 # Livedisplay
-PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service-sdm
+#PRODUCT_PACKAGES += \
+#    lineage.livedisplay@2.0-service-sdm
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -100,35 +106,35 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # NFC
-PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    com.gsma.services.nfc \
-    com.nxp.nfc.nq \
-    libnqnfc-nci \
-    nqnfcee_access.xml \
-    nqnfcse_access.xml \
-    NQNfcNci \
-    SecureElement \
-    Tag
+#PRODUCT_PACKAGES += \
+#    com.android.nfc_extras \
+#    com.gsma.services.nfc \
+#    com.nxp.nfc.nq \
+#    libnqnfc-nci \
+#    nqnfcee_access.xml \
+#    nqnfcse_access.xml \
+#    NQNfcNci \
+#    SecureElement \
+#    Tag
 
 # Power
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service
 
 # Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext
+#PRODUCT_PACKAGES += \
+#    telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+#PRODUCT_BOOT_JARS += \
+#    telephony-ext
 
 # TextClassifier
-PRODUCT_PACKAGES += \
-    textclassifier.bundle1
+#PRODUCT_PACKAGES += \
+#    textclassifier.bundle1
 
 # WiFi Display
-PRODUCT_PACKAGES += \
-    libnl
+#PRODUCT_PACKAGES += \
+#    libnl
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
