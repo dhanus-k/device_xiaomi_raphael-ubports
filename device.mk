@@ -41,10 +41,10 @@ PRODUCT_COPY_FILES += \
 #    Snap
 
 # Camera motor
-PRODUCT_PACKAGES += \
-    libdng_sdk.vendor \
-    libgui_vendor \
-    vendor.lineage.camera.motor@1.0-service.xiaomi_raphael
+#PRODUCT_PACKAGES += \
+#    libdng_sdk.vendor \
+#    libgui_vendor \
+#    vendor.lineage.camera.motor@1.0-service.xiaomi_raphael
 
 # Device-specific settings
 #PRODUCT_PACKAGES += \
@@ -58,19 +58,19 @@ PRODUCT_PACKAGES += \
 #PRODUCT_COPY_FILES += \
 #    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
-PRODUCT_PACKAGES += \
-    lineage.biometrics.fingerprint.inscreen@1.0-service.raphael
+#PRODUCT_PACKAGES += \
+#    lineage.biometrics.fingerprint.inscreen@1.0-service.raphael
 
 # FM
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
 #    FM2 \
 #    libqcomfm_jni \
-    qcom.fmradio
+#    qcom.fmradio
 
 # HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.manager@1.0
+#PRODUCT_PACKAGES += \
+#    android.hidl.base@1.0 \
+#    android.hidl.manager@1.0
 
 # HotwordEnrollement
 #PRODUCT_COPY_FILES += \
