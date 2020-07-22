@@ -120,6 +120,9 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/dsp:/dsp \
     /vendor/firmware_mnt:/firmware
 
+# Ramdisk
+BOARD_ROOT_EXTRA_FOLDERS += efs
+
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USES_MKE2FS := true
